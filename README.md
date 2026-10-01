@@ -1,37 +1,37 @@
 # 🇵🇭 Bantay-Kalsada API
 
-> **Empowering Filipino citizens to monitor public works, upload geo-tagged defect reports, and hold local government units accountable.**
+> **Empowering citizens to monitor, report, and flag public infrastructure projects in the Philippines.**
+
+Bantay-Kalsada is a zero-budget, open-source RESTful API built with **Laravel 13** and **PostgreSQL**. It allows citizens to log geotagged reports with photo evidence on ongoing or completed road and public works projects, automatically calculating LGU-level infrastructure risk scores.
 
 ---
 
-## 📌 Project Overview
+## 🚀 Features
 
-**Bantay-Kalsada** is an open-source civic technology platform designed to track public infrastructure projects across the Philippines. By tapping into open government data (e.g., PhilGEPS, DPWH) and crowding-sourcing citizen reports, the API calculates dynamic **Corruption Risk Scores** for LGUs without requiring expensive infrastructure.
-
-### Key Features
-- **Citizen Report Ingestion:** Submit geo-tagged report logs with multi-photo uploads.
-- **Geofenced Verification:** Ensures uploaded photos correspond to actual project coordinates.
-- **Automated Anomaly Detection:** Flags projects with high citizen defect reports or delays.
-- **Zero-Budget Stack:** Built to run on free-tier platforms (Render/Fly.io + Supabase + Redis).
+- **Public Works Tracking:** Ingests official project data (DPWH / PhilGEPS / LGU allocations).
+- **Citizen Reporting:** Ingests geotagged photos, issue classifications (potholes, delays, abandoned sites, substandard materials), and descriptions.
+- **Risk Score Analytics:** Computes corruption risk and discrepancy scores per barangay, city, and region.
+- **Zero-Budget Architecture:** Designed to run entirely on free-tier services (Render, Fly.io, Supabase, Cloudinary).
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
-- **Framework:** Laravel 11 (PHP 8.2+)
-- **Database:** PostgreSQL + PostGIS (Hosted on Supabase)
-- **Media Storage:** Supabase Storage / Cloudinary
-- **Authentication:** Laravel Sanctum
-- **Queue & Caching:** Redis / Database Driver
+- **Framework:** Laravel 13 (PHP 8.3+)
+- **Database:** PostgreSQL (with PostGIS spatial extensions)
+- **Authentication:** Laravel Sanctum (Optional / Anonymous reporting enabled)
+- **Storage:** Cloudinary / Supabase Storage (Free Tiers)
+- **Testing:** Pest PHP / PHPUnit
 
 ---
 
-## 🚀 Quickstart (Local Setup)
+## ⚡ Quick Start (Local Setup)
 
 ### Prerequisites
-- PHP 8.2+
-- Composer
-- PostgreSQL / SQLite
+
+- PHP 8.3+
+- Composer 2.7+
+- PostgreSQL 15+
 
 ### Installation
 
